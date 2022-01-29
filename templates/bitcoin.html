@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
 
     <!-- Plolty library-->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -55,10 +55,11 @@
                 <!-- <hr style=" height: 1.5px; width: 100%;color:white;background-color:white">  -->
             </div>          
             <div class="row">
-                <marquee style="font-size: 30px;
+                <marquee id="Mq" style="font-size: 30px;
                 font-weight: 800;
                 color: #0eda1f;
-                font-family: sans-serif;">Top Assets: Bitcoin :  Tether:   Ethereum </marquee>
+                font-family: sans-serif;"></marquee>
+                <!-- Top Assets: Bitcoin :  Tether:   Ethereum  -->
             </div>
         </div>      
           
@@ -124,8 +125,8 @@
                         <a class="bd-toc-link" href="">Text 2</a>
                     </div>
                     <br>
-                </nav> -->
-            <!-- </div> -->
+                </nav>
+            </div> --> -->
             <!-- letside bar ends -->
 
             <!-- main content starts -->
@@ -146,17 +147,47 @@
                         <br>
                         <h2 id="head-2"style="color:blue ;">Price Performance </h2>
                         <hr>
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
-                        <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        <ul style="padding-left: 100px; padding-right: 400px;">
-                            <li></li>
-                            
-                        </ul>
-                        <br>
-                        <br>
-                                            
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <h1 style="color :blue ">Plot</h1>
+                                <img src="https://static.news.bitcoin.com/wp-content/uploads/2021/11/btcusd_2021-11-29_12-02-24-2048x1224.png" class="img-thumbnail img-fluid"
+                                alt="BitcoinSample plot">
+                            </div>
+                            <div class="col-sm-5" style="margin-left:200px;">                         
+                                <h3 style=" color: blue;">Bitcoin</h3>          
+                                <div class="box" >
+
+                                 <table class="table" > 
+                                    <thead>
+                                    </thead>
+                                    <tbody id="table-body">
+                                        <tr>
+                                            <th>Open Price</th>
+                                                <td>value</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Close Price</th>
+                                                <td>value</td>
+                                        </tr>
+                                        <tr>
+                                            <th>All Time High</th>
+                                                <td>value</td>
+                                        </tr>
+                                        <tr>
+                                            <th>All Time Low</th>
+                                                <td>value</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Volume</th>
+                                                <td>value</td>
+                                        </tr>
+                                    </tbody>                             
+                                </table>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>                    
                     </div>
                 </div>
                 <div class="row" id="description-container" style="background-color: black;">
@@ -196,9 +227,10 @@
             Because the market cannot be accurately predicted or completely controlled, 
             no investment is risk-free.So please do not take these predictions as 
             financial advice. </p>
-            <p style="padding-left: 200px; padding-right: 200px; font-size: 16px; font-weight: lighter; color: white;">Price Prediction by: <a href="about.html" style="color: white;">Team members</a> </p>
+            <p style="padding-left: 200px; padding-right: 200px; font-size: 16px; font-weight: lighter; color: white;">Price Prediction by: <a href="about.html" style="color: white;">Our Team</a> </p>
         </div>
     </footer>
     <!-- footer ends -->
+    <script src="../static/bitcoin.js"></script>
 </body>
 </html>
