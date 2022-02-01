@@ -1,7 +1,5 @@
-
- d3.json("Hourly.json").then(data => {
-    
-    //console.log(data.map(row => row.close));
+d3.json("Daily.json").then(data=>{
+    console.log(data);
 
     //////////////////////////------MARQUEE----------//////////////////////////////
     
@@ -22,9 +20,9 @@
     ///////////////////////////----------------TABLE------------///////////////////////////////
 
     var openprice=formatter.format(data[(data.length)-1].open);
-    var allhigh=formatter.format(data[(data.length)-1].high);
-    var alllow=formatter.format(data[(data.length)-1].low);
-    var volume=formatter.format(data[(data.length)-1].volume);
+    var allhigh=formatter.format(Math.max(...data.map(row => row.high)));///... spreads array
+    var alllow=formatter.format(Math.min(...data.map(row=>row.low)));
+    var volume=formatter.format(data[(data.length)-1].volumefrom);
 
     d3.select("#openprice").text(openprice);
     d3.select("#closeprice").text(Bitcloseprice);
@@ -37,7 +35,7 @@
         
     var trace1 = {
        
-        x:data.map(row => row.Datetime),
+        x:data.map(row => row.timestamp_date),
         close:data.map(row => row.close),
         high:data.map(row => row.high),
         low:data.map(row => row.low),
@@ -96,11 +94,12 @@
 ////////////////////////----------------Price vs Date AREA Chart------------////////////////
    
     var trace2 = {
-            x:data.map(row => row.Datetime),
+            x:data.map(row => row.timestamp_date),
             y: data.map(row => row.close),
-            setopacity: 0,
-            fill:'tozeroy',
-           // fill: 'tonexty',
+            // setopacity: 0,
+            // fillOpacity: 0.75,
+             fill:'tozeroy',
+        //    fill: 'tonexty',
             type: 'scatter',
             mode: 'lines',
            fillcolor: '#4df761'
@@ -116,11 +115,12 @@
 
 
 //----------------------------------plotly Model prediction---------------------------
+// d3.json("Crypto_past_year_Predictions.json").then(data => {
 d3.json("Model.json").then(data => {
-    console.log(data);
+    // console.log(data);
 ///////////---trace for Predictions for past date---//////
    let trace3 = {
-     x:data.map(row => row.Datetime),
+     x:data.map(row => row.dates),
      y: data.map(row => row.predictions),
         name: "Predictions",
         mode: 'lines',
@@ -131,8 +131,8 @@ d3.json("Model.json").then(data => {
     }
 ///////////---trace for real data for past date---//////
     let trace4 = {
-      x:data.map(row => row.Datetime),
-      y: data.map(row => row.realvalues),
+      x:data.map(row => row.dates),
+      y: data.map(row => row.real_prices),
       name: "Realdata",
       mode: 'lines',
       line: {
@@ -194,7 +194,7 @@ d3.json("Model.json").then(data => {
   };
    
   //         // Render the plot to the div tag with id "plotplotmodelprediction"
-    Plotly.newPlot("plotmodelprediction", traceData3, layout1);
+     Plotly.newPlot("plotmodelprediction", traceData3, layout1);
 
 
  });
