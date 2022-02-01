@@ -42,8 +42,7 @@
     <div class="container-fluid" id="title-img" style="background-color: black;">
         <div class="maintxt" >
             <div class="text-center p-3">
-                <!-- <img id="title-img" src="https://cdn.pixabay.com/photo/2018/09/05/18/21/bitcoin-3656764_1280.jpg" width="1000" height="400" alt="" class="img-responsive"> -->
-                <img id="title-img" src="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" width="1000" height="400" alt="" class="img-responsive">
+                <img id="title-img" src="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" width="1000" height="300" alt="" class="img-responsive">
                 <div class="btm-right">
                     <a href="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" style="color: white; font-weight: normal; font-style: italic;">Image source: pixabay</a>
                 </div>
@@ -53,7 +52,8 @@
                 <h1 id="title-text" style="color:whitesmoke">CryptoKasse</h1>
                 <p style="font-weight: normal;font-style: italic; font-size: 15px; color: whitesmoke;">Crypto Currency Price Prediction</p>
                 <!-- <hr style=" height: 1.5px; width: 100%;color:white;background-color:white">  -->
-            </div>          
+            </div>  
+                    <!-- //////////////////MARQUEE/////////////////////////// -->
             <div class="row">
                 <marquee id="Mq" behavior="alternate",
                 scrollamount="5" ,
@@ -115,9 +115,10 @@
         </div>
         
             <!-- main content starts -->
-            <div class="col-lg-12">
-                            <!-- </div>class="col-12 col-md-9 col-xl-10 py-md-5 ev-content">  -->
+            <div class="col-lg-12"style="margin-left:50px;">
+                            
                 <div class="col-lg-12">
+                    <br>
                     <h1 class="ev-title" id="head-1"style="color:blue ;"> About Bitcoin </h1>
                     <hr>
                     <p style="padding-left: 50px; padding-right: 400px;color:whitesmoke">Bitcoin is the world’s first decentralized cryptocurrency – a type of digital asset that uses public-key cryptography to record, sign and send transactions over the Bitcoin blockchain – all done without the oversight of a central authority.
@@ -135,7 +136,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-9">
-                                <h1 style="color :blue ">Plot</h1>
+                                <!-- <h1 style="color :blue ">Plot</h1> -->
                                 <div id="plotPrice"></div>
                             </div>
                             <div class="col-sm-3">
@@ -179,21 +180,35 @@
                     </div>
                 </div>
                 <div class="row" id="description-container" style="background-color: black;">
-                    <div class="col-md-12">
+                    <div class="col-sm-9">
                         <br>
                         <h2 id="head-2"style="color:blue ;">Market Analysis </h2>
+                        <hr>
+                        
+                        <div id="plotcandlestick"></div>
+
+                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
+                        <br>
+                        <p style="padding-left: 50px; padding-right: 400px;"></p>
+                        <br>
+                        
+                        <br>
+                        <br>
+                                            
+                    </div>
+                </div>
+                <!-- ////////////Price Prediction////////////// -->
+                <div class="row" id="description-container" style="background-color: black;">
+                    <div class="col-sm-9">
+                        <br>
+                        <h2 id="head-2"style="color:blue ;">Price Prediction</h2>
                         <hr>
                         
                         <div id="plotmodelprediction"></div>
 
                         <p style="padding-left: 50px; padding-right: 400px;"> </p>
                         <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        <ul style="padding-left: 100px; padding-right: 400px;">
-                            <li></li>
-                            
-                        </ul>
+                                             
                         <br>
                         <br>
                                             

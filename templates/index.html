@@ -56,10 +56,18 @@
                 <!-- <hr style=" height: 1.5px; width: 100%;color:white;background-color:white">  -->
             </div>          
             <div class="row">
-                <marquee style="font-size: 30px;
-                font-weight: 800;
-                color: #0eda1f;
-                font-family: sans-serif;">Top Assets: Bitcoin :  Tether:   Ethereum </marquee>
+                <marquee id="Mq" behavior="alternate",
+                scrollamount="5" ,
+                onmouseover="this.stop();",
+                onmouseout="this.start();",
+                hspace="400"
+                                             >
+                                            <!-- <span id="whitetext1" style="color: white;"></span> -->
+                                            <span id="greentext1" style="color: #0eda1f;"></span>
+                                            <span id="redtext1" style="color: red;"></span>
+                                            <span id="whitetext2" style="color: #0eda1f;"></span>
+                                            <span id="redtext2" style="color: red;"></span>
+                </marquee>
             </div>
         </div>      
           
@@ -108,38 +116,23 @@
         <!-- navbar ends -->
          <!-- content starts -->
         <div class="row flex-xl-nowrap" >
-            <!-- leftside bar starts -->
-            <!-- <div class="col-12 col-md-3 col-xl-2 ev-sidebar" style="background-color:rgb(12, 12, 12);"> --> -->
-            <!-- "background-color:#141d33;"> -->
-                <!-- <br>
-                <nav class="collapes bd-links" id="bd-docs-nav">
-
-                    <br>
-                    <br>
-                    <br>
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="">Text 1</a>
-                    </div>
-                    <br>
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="">Text 2</a>
-                    </div>
-                    <br>
-                </nav> -->
-            <!-- </div> -->
-            <!-- letside bar ends -->
-
-            <!-- main content starts -->
-            <div class="col-12 col-md-9 col-xl-10 py-md-5 ev-content">
+                        <!-- main content starts -->
+            <div class="col-12 col-md-9 col-xl-10 py-md-5 ev-content"style="margin-left:100px;">
                 <div class="col-lg-12" >
-                    <h1 class="ev-title" id="head-1"style="color:blue ;"> About CryptoKasse </h1>
+                    <!-- <br>class="ev-title" id="head-1" -->
+                    <h1 style="color:blue ;">About CryptoKasse </h1>
                     <hr>
-                    <!-- <p style="padding-left: 50px; padding-right: 400px;color:whitesmoke">Bitcoin is the world’s first decentralized cryptocurrency – a type of digital asset that uses public-key cryptography to record, sign and send transactions over the Bitcoin blockchain – all done without the oversight of a central authority.
-
-                        The Bitcoin network (with an upper-case “B”) was launched in January 2009 by an anonymous computer programmer or group of programmers under the pseudonym “Satoshi Nakamoto.” The network is a peer-to-peer electronic payment system that uses a cryptocurrency called bitcoin (lower case “b”) to transfer value over the internet or act as a store of value like gold and silver.
-                        
-                        Each bitcoin is made up of 100 million satoshis (the smallest units of bitcoin), making individual bitcoin divisible up to eight decimal places. That means anyone can purchase a fraction of a bitcoin with as little as one U.S. dollar.</p>
-                    <br> -->
+                    <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">Cryptocurrencies are digital assets and decentralized systems that allow for secure online payments.</p>
+                    <!-- <br> -->
+                    <h6 style="color:blue ;">Types of Cryptocurrency</h6> 
+                    <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">Bitcoin is the most popular and valuable cryptocurrency. 
+                        There are thousands of cryptocurrencies present in the market today.Each cryptocurrency claims to have a different function and specification.
+                        For example, Ethereum's ether markets itself as gas for the underlying 
+                        smart contract platform. Ripple's XRP is used by banks to facilitate transfers 
+                        between different geographies.</p>
+                    <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">Bitcoin, which was made available to the public in 2009, remains the most 
+                            widely traded and covered cryptocurrency.</p>
+                    <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">At CryptoKasse we provide daily, weekly and monthly predictions for Bitcoin, Ethereum and Tether.</p>
                 </div>
                 
                 <div class="row" id="description-container" >
@@ -147,14 +140,10 @@
                         <br>
                         <h2 id="head-2"style="color:blue ;">Data Source </h2>
                         <hr>
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
+                        <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke"> The crypto price data is pulled in through an API on CryptoCompare:
+                        <a style="padding-left: 50px; padding-right: 50px;color:greenyellow "href="https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistohour">CryptoCompare</a></p>
                         <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        <ul style="padding-left: 100px; padding-right: 400px;">
-                            <li></li>
-                            
-                        </ul>
+                        <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">The pricing information includes: timestamp, high, low, open, volumefrom, volumeto, and close.</p>
                         <br>
                         <br>
                                             
@@ -165,33 +154,18 @@
                         <br>
                         <h2 id="head-2"style="color:blue ;">ETL </h2>
                         <hr>
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
-                        <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        <ul style="padding-left: 100px; padding-right: 400px;">
-                            <li></li>
-                            
-                        </ul>
-                        <br>
-                        <br>
+                        <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">The data is extracted and aggregated from the recurring API to gather historical data for the chosen crypto currency. This data will be put into a Pandas Dataframe after extracting the necessary info from the API json object that is returned. Then it will be appended into a PostgreSQL database for storage. </p>
+                                                <br>
                                             
                     </div>
                 </div>
                 <div class="row" id="description-container" >
                     <div class="col-md-12">
                         <br>
-                        <h2 id="head-2"style="color:blue ;">Machine Learning </h2>
+                        <h2 id="head-2"style="color:blue ;">Machine Learning Model </h2>
                         <hr>
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
-                        <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        <ul style="padding-left: 100px; padding-right: 400px;">
-                            <li></li>
-                            
-                        </ul>
-                        <br>
+                        <p style="padding-left: 50px; padding-right: 50px;color:whitesmoke">The Long Short Term Model (LSTM) has been used to do the price forecasting. LSTM is a slightly more sophisticated version of a Recurrent Neural Network (RNN) which incorporates long term memory. The model will be trained on historical price data and used to predict the next value in the series. (Time window for predictions, tbd)</p>
+                        
                         <br>
                                             
                     </div>
@@ -201,6 +175,7 @@
                         <br>
                         <h2 id="head-2"style="color:blue ;">Analysis </h2>
                         <hr>
+                        <h6 style="color:blue ;">Visualizations:</h6>
                         <p style="padding-left: 50px; padding-right: 400px;"> </p>
                         <br>
                         <p style="padding-left: 50px; padding-right: 400px;"></p>

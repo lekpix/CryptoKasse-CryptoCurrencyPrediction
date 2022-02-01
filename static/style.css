@@ -52,13 +52,17 @@ td{
 tr:hover {
   background-color:gray;
 }
-#plotPrice{
- height: 400;
+/* #plotPrice{
+ height: 600;
  width: 1200;
 
+ } */
+ /* #plotcandlestick{
+  height: 600;
+  width: 1200;
  }
 #plotmodelprediction{
   height: 400;
  width: 1200;
-}
+} */
 

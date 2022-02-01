@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
 
     <!-- Plolty library-->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -42,8 +42,8 @@
     <div class="container-fluid" id="title-img" style="background-color: black;">
         <div class="maintxt" >
             <div class="text-center p-3">
-                <!-- <img id="title-img" src="https://cdn.pixabay.com/photo/2018/09/05/18/21/bitcoin-3656764_1280.jpg" width="1000" height="400" alt="" class="img-responsive"> -->
-                <img id="title-img" src="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" width="1000" height="400" alt="" class="img-responsive">
+                
+                <img id="title-img" src="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" width="1000" height="300" alt="" class="img-responsive">
                 <div class="btm-right">
                     <a href="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" style="color: white; font-weight: normal; font-style: italic;">Image source: pixabay</a>
                 </div>
@@ -55,10 +55,18 @@
                 <!-- <hr style=" height: 1.5px; width: 100%;color:white;background-color:white">  -->
             </div>          
             <div class="row">
-                <marquee style="font-size: 30px;
-                font-weight: 800;
-                color: #0eda1f;
-                font-family: sans-serif;">Top Assets: Bitcoin :  Tether:   Ethereum </marquee>
+                <marquee id="Mq" behavior="alternate",
+                scrollamount="5" ,
+                onmouseover="this.stop();",
+                onmouseout="this.start();",
+                hspace="400"
+                                             >
+                                            <!-- <span id="whitetext1" style="color: white;"></span> -->
+                                            <span id="greentext1" style="color: #0eda1f;"></span>
+                                            <span id="redtext1" style="color: red;"></span>
+                                            <span id="whitetext2" style="color: #0eda1f;"></span>
+                                            <span id="redtext2" style="color: red;"></span>
+                </marquee>
             </div>
         </div>      
           
@@ -104,32 +112,9 @@
                       </ul>
                 </div>
         </div>
-        <!-- navbar ends -->
-         <!-- content starts -->
-        <div class="row flex-xl-nowrap" >
-            <!-- leftside bar starts -->
-            <!-- <div class="col-12 col-md-3 col-xl-2 ev-sidebar" style="background-color:rgb(12, 12, 12);"> --> -->
-            <!-- "background-color:#141d33;"> -->
-                <!-- <br>
-                <nav class="collapes bd-links" id="bd-docs-nav">
-
-                    <br>
-                    <br>
-                    <br>
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="">Text 1</a>
-                    </div>
-                    <br>
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="">Text 2</a>
-                    </div>
-                    <br>
-                </nav> -->
-            <!-- </div> -->
-            <!-- letside bar ends -->
-
+        
             <!-- main content starts -->
-            <div class="col-12 col-md-9 col-xl-10 py-md-5 ev-content">
+            <div class="col-12 col-md-9 col-xl-10 py-md-5 ev-content"style="margin-left:100px;">
                 <div class="col-lg-12">
                     <h1 class="ev-title" id="head-1"style="color:blue ;"> About  </h1>
                     <hr>
@@ -143,13 +128,13 @@
                         <br>
                         <h2 id="head-2"style="color:blue ;">CryptoKasse Team</h2>
                         <hr>
-                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Anna Weeks- <a href="https://github.com/Annaolivia5" style="color: white;">GitHub</a> </p>
+                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Anna Weeks- <a href="https://github.com/Annaolivia5" style="color: rgb(131, 230, 18);">GitHub</a> </p>
                         <br>
-                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Hima Vissa- <a href="https://github.com/himavissa" style="color: white;">GitHub</a> </p>
+                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Hima Vissa- <a href="https://github.com/himavissa" style="color:rgb(131, 230, 18);">GitHub</a> </p>
                         <br>
-                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Jacob Trevithick - <a href="https://github.com/JacobTrevithick" style="color: white;">GitHub</a> </p>
+                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Jacob Trevithick - <a href="https://github.com/JacobTrevithick" style="color:rgb(131, 230, 18);">GitHub</a> </p>
                         <br>
-                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Lekshmi Prabha - <a href="https://github.com/lekpix" style="color: white;">GitHub</a> </p>
+                        <p style="padding-left: 50px; padding-right: 400px;color: white;">Lekshmi Prabha - <a href="https://github.com/lekpix" style="color:rgb(131, 230, 18);">GitHub</a> </p>
                         <br>
                         <br>
                                             
@@ -159,7 +144,7 @@
                 
             </div>
             <!-- main content ends -->
-            <!-- <div class="col-12 col-md-3 col-xl-2 ev-sidebar" style="background-color:rgb(12, 12, 12);">  -->
+            
              </div>   
         </div>
     </div>
