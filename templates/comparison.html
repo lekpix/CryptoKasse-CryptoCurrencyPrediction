@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin page</title>
+    <title>Comparison page</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -42,6 +42,7 @@
     <div class="container-fluid" id="title-img" style="background-color: black;">
         <div class="maintxt" >
             <div class="text-center p-3">
+                
                 <img id="title-img" src="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" width="1000" height="300" alt="" class="img-responsive">
                 <div class="btm-right">
                     <a href="https://cdn.pixabay.com/photo/2021/09/06/12/40/cryptocurrency-6601591_1280.jpg" style="color: white; font-weight: normal; font-style: italic;">Image source: pixabay</a>
@@ -52,8 +53,7 @@
                 <h1 id="title-text" style="color:whitesmoke">CryptoKasse</h1>
                 <p style="font-weight: normal;font-style: italic; font-size: 15px; color: whitesmoke;">Crypto Currency Price Prediction</p>
                 <!-- <hr style=" height: 1.5px; width: 100%;color:white;background-color:white">  -->
-            </div>  
-                    <!-- //////////////////MARQUEE/////////////////////////// -->
+            </div>          
             <div class="row">
                 <marquee id="Mq" behavior="alternate",
                 scrollamount="5" ,
@@ -67,7 +67,6 @@
                                             <span id="whitetext2" style="color: #0eda1f;"></span>
                                             <span id="redtext2" style="color: red;"></span>
                 </marquee>
-                              
             </div>
         </div>      
           
@@ -108,109 +107,67 @@
         </div>
         
             <!-- main content starts -->
-            <div class="col-lg-12"style="margin-left:50px;">
-                            
+            <div class="col-12 col-md-9 col-xl-10 py-md-5 ev-content"style="margin-left:100px;">
                 <div class="col-lg-12">
-                    <br>
-                    <h1 class="ev-title" id="head-1"style="color:blue ;"> About Bitcoin </h1>
-                    <hr>
-                    <p style="padding-left: 50px; padding-right: 400px;color:whitesmoke">Bitcoin is the world’s first decentralized cryptocurrency – a type of digital asset that uses public-key cryptography to record, sign and send transactions over the Bitcoin blockchain – all done without the oversight of a central authority.
-
-                        The Bitcoin network (with an upper-case “B”) was launched in January 2009 by an anonymous computer programmer or group of programmers under the pseudonym “Satoshi Nakamoto.” The network is a peer-to-peer electronic payment system that uses a cryptocurrency called bitcoin (lower case “b”) to transfer value over the internet or act as a store of value like gold and silver.
-                        
-                        Each bitcoin is made up of 100 million satoshis (the smallest units of bitcoin), making individual bitcoin divisible up to eight decimal places. That means anyone can purchase a fraction of a bitcoin with as little as one U.S. dollar.</p>
+                    <h1 class="ev-title" id="head-1"style="color:blue ;"> Overview  </h1>
+                    <!-- <hr> -->
+                    <p style="padding-left: 50px; padding-right: 400px;color:whitesmoke"></p>
+                    
+                    <div class="box" > 
+                                                    
+                     <table id="tablecomparison"style="width:100% ;">
+                        <thead>
+                            <th>Asset</th>
+                            <th>Price</th>
+                            <th>Volume</th>
+                            <th>All Time High</th>
+                            <br>
+                            <th>All Time Low</th>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr >
+                                <td id="assetname1">value</td>
+                                <br>
+                                <td id="closeprice1">value</td>
+                                <br>
+                                <td id="volume1">value</td>
+                                <br>
+                                <td id="high1">value</td>
+                                <br>
+                                <td id="low1">value</td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td id="assetname2">value</td>
+                                <td id="closeprice2">value</td>
+                                <td id="volume2">value</td>
+                                <td id="high2">value</td>
+                                <td id="low2">value</td>
+                            </tr>
+                            
+                        </tbody>                             
+                    </table>
+                    </div>
+                    <p style="padding-left: 50px; padding-right: 400px;color:whitesmoke"></p>
                     <br>
                 </div>
                 
                 <div class="row" id="description-container" style="background-color: black;">
-                    <div class="col-md-12">
-                        <br>
-                        <h2 id="head-2"style="color:blue ;">Price Performance </h2>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <!-- <h1 style="color :blue ">Plot</h1> -->
-                                <div id="plotPrice"></div>
-                            </div>
-                            <div class="col-sm-3">
-                                                            <!-- </div> style="margin-left:200px;"> -->                          
-                                         
-                                <div class="box" >
-                                    <br>
-                                    <br>                                  
-                                 <table class="table"  > 
-                                    <thead>
-                                        <h3 style=" color: blue; ">Bitcoin Price</h3>
-                                    </thead>
-                                    <tbody id="table-body">
-                                        <tr >
-                                            <th>24H Open </th>
-                                                <td id="openprice">value</td>
-                                        </tr>
-                                        <tr>
-                                            <th>24H Close </th>
-                                                <td id="closeprice">value</td>
-                                        </tr>
-                                        <tr>
-                                            <th>All Time High</th>
-                                                <td id="high">value</td>
-                                        </tr>
-                                        <tr>
-                                            <th>All Time Low</th>
-                                                <td id="low">value</td>
-                                        </tr>
-                                        <tr>
-                                            <th>24H Volume</th>
-                                                <td id="volume">value</td>
-                                        </tr>
-                                    </tbody>                             
-                                </table>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                        </div>                    
-                    </div>
-                </div>
-                <div class="row" id="description-container" style="background-color: black;">
                     <div class="col-sm-9">
                         <br>
-                        <h2 id="head-2"style="color:blue ;">Market Analysis </h2>
+                        <h2 id="head-2"style="color:blue ;">Price Performance Comparison </h2>
                         <hr>
-                        
-                        <div id="plotcandlestick"></div>
-
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
-                        <br>
-                        <p style="padding-left: 50px; padding-right: 400px;"></p>
-                        <br>
-                        
+                        <div id="plotcompare"></div>
                         <br>
                         <br>
                                             
                     </div>
                 </div>
-                <!-- ////////////Price Prediction////////////// -->
-                <div class="row" id="description-container" style="background-color: black;">
-                    <div class="col-sm-9">
-                        <br>
-                        <h2 id="head-2"style="color:blue ;">Price Prediction</h2>
-                        <hr>
-                        
-                        <div id="plotmodelprediction"></div>
-
-                        <p style="padding-left: 50px; padding-right: 400px;"> </p>
-                        <br>
-                                             
-                        <br>
-                        <br>
-                                            
-                    </div>
                 </div>
                 
             </div>
             <!-- main content ends -->
-            <!-- <div class="col-12 col-md-3 col-xl-2 ev-sidebar" style="background-color:rgb(12, 12, 12);">  -->
+            
              </div>   
         </div>
     </div>
@@ -230,7 +187,7 @@
         </div>
     </footer>
     <!-- footer ends -->
-    <script src="../static/bitcoin.js"></script>
+    
     <script src="../static/marquee.js"></script>
 </body>
 </html>

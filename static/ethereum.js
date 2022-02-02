@@ -1,14 +1,13 @@
-d3.json("Daily.json").then(data=>{
+
+
+d3.json("ETHDaily.json").then(data=>{
     console.log(data);
 
-       
+    ///////////////////////////----------------TABLE------------///////////////////////////////
     var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     });
-    
-    
-    ///////////////////////////----------------TABLE------------///////////////////////////////
 
     var openprice=formatter.format(data[(data.length)-1].open);
     var closeprice=formatter.format(data[(data.length)-1].close);
@@ -186,7 +185,7 @@ d3.json("Model.json").then(data => {
   };
    
   //         // Render the plot to the div tag with id "plotplotmodelprediction"
-     Plotly.newPlot("plotmodelprediction", traceData3, layout1);
+    //  Plotly.newPlot("plotmodelprediction", traceData3, layout1);
 
 
  });
