@@ -1,6 +1,4 @@
-
-
-d3.json("ETHDaily.json").then(data=>{
+d3.json("Resources/ETH_daily_data.json").then(data=>{
     console.log(data);
 
     ///////////////////////////----------------TABLE------------///////////////////////////////
@@ -8,12 +6,18 @@ d3.json("ETHDaily.json").then(data=>{
         style: 'currency',
         currency: 'USD',
     });
+    var millionformatter=new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        notation: "compact",
+        compactDisplay: "short"
+    });
 
     var openprice=formatter.format(data[(data.length)-1].open);
     var closeprice=formatter.format(data[(data.length)-1].close);
     var allhigh=formatter.format(Math.max(...data.map(row => row.high)));///... spreads array
     var alllow=formatter.format(Math.min(...data.map(row=>row.low)));
-    var volume=formatter.format(data[(data.length)-1].volumefrom);
+    var volume=millionformatter.format((data[(data.length)-1].volumefrom)+(data[(data.length)-1].volumeto));
 
     d3.select("#openprice").text(openprice);
     d3.select("#closeprice").text(closeprice);
@@ -107,7 +111,7 @@ d3.json("ETHDaily.json").then(data=>{
 
 //----------------------------------plotly Model prediction---------------------------
 // d3.json("Crypto_past_year_Predictions.json").then(data => {
-d3.json("Model.json").then(data => {
+d3.json("Resources/Model.json").then(data => {
     // console.log(data);
 ///////////---trace for Predictions for past date---//////
    let trace3 = {
